@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:orientation="horizontal"
+        android:background="#133275"
+        android:padding="2dp"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:layout_weight="9"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:src="@drawable/action"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_weight="6"
+                    android:text="Log in to access"
+                    android:layout_margin="4dp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="bottom"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/edit_txt_bg"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_baseline_date_range_24"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="8"
+                        android:padding="2dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_height="wrap_content"
+                        android:hint="Expiry Date"
+                        android:textColorHint="#0A2FFB" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/menu_bg"
+            android:src="@drawable/menu"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pinPassLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/actionBar"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/pinLayout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+
+            android:background="@drawable/pin_bg"
+            android:layout_margin="5dp"
+            android:weightSum="10">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:elevation="40dp"
+                android:padding="10dp"
+                android:src="@drawable/pin"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:padding="10dp"
+                android:layout_weight="8"
+                android:inputType="number"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                android:hint="Enter PIN"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/passLayout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="@drawable/pin_bg"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:elevation="40dp"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:src="@drawable/pass"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:padding="10dp"
+                android:layout_weight="8"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:inputType="textPassword"
+                android:gravity="start"
+                android:hint="Enter Password"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mainImg"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/pinPassLayout"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main" />
+
+    <TextView
+        android:id="@+id/txtConnect"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainImg"
+        android:text="Connect"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:background="@drawable/connect_location_bg"
+        android:padding="5dp"
+        android:textColor="#3C59F8"
+        android:textSize="22sp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutLocation"
+        android:layout_below="@id/txtConnect"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:background="@drawable/connect_location_bg"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3C59F8"
+            android:layout_marginLeft="22dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            style="?android:attr/spinnerDropDownItemStyle"
+            android:ellipsize="marquee"
+            android:text="Select Location"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/drop"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#133275"
+        android:padding="2dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="10">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/account"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:textColor="#FFFFFF"
+                android:text="Account"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/update"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:textColor="#FFFFFF"
+                android:text="Update"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/option"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:textColor="#FFFFFF"
+                android:text="Option"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/exit"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:textColor="#FFFFFF"
+                android:text="Exit"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
